@@ -1,7 +1,7 @@
 //! The [RIPEMD-160] hash function.
 //!
 //! [RIPEMD-160]: https://homes.esat.kuleuven.be/~bosselae/ripemd160.html
-//! 
+//!
 pub mod ref_impl;
 pub mod table16;
 use std::fmt;
@@ -44,7 +44,7 @@ pub trait RIPEMD160Instructions<F: FieldExt>: Chip<F> {
 
 /// The output of a RIPEMD-160 circuit invocation.
 #[derive(Debug)]
-pub struct RIPEMD160Digest<BlockWord>([BlockWord; DIGEST_SIZE]);
+pub struct RIPEMD160Digest<BlockWord>(pub [BlockWord; DIGEST_SIZE]);
 
 /// A gadget that constrains a RIPEMD-160 invocation. It supports input at a granularity of
 /// 32 bits.
@@ -122,7 +122,7 @@ mod tests {
         impl Circuit<pallas::Base> for MyCircuit {
             type Config = Table16Config;
             type FloorPlanner = SimpleFloorPlanner;
-            
+
             fn without_witnesses(&self) -> Self {
                 MyCircuit {}
             }
@@ -143,7 +143,7 @@ mod tests {
                     .into_iter()
                     .map(convert_byte_slice_to_blockword_slice::<BLOCK_SIZE_BYTES, BLOCK_SIZE>)
                     .collect();
-                
+
                 let digest = RIPEMD160::digest(table16_chip, layouter, &data)?;
 
                 let output: [u32; DIGEST_SIZE] = convert_byte_slice_to_u32_slice(hash(input));

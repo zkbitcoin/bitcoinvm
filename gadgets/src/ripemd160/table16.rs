@@ -15,7 +15,8 @@ mod compression;
 mod gates;
 mod message_schedule;
 mod spread_table;
-pub(crate) mod util;
+//pub(crate) mod util;
+pub mod util;
 
 use gates::*;
 use spread_table::*;
@@ -366,7 +367,7 @@ trait Table16Assignment {
         a_5: Column<Advice>,
         word: Value<u32>,
         row: usize,
-    ) -> Result<(AssignedBits<32>, (SpreadVar<16, 32>, SpreadVar<16,32>)), Error> 
+    ) -> Result<(AssignedBits<32>, (SpreadVar<16, 32>, SpreadVar<16,32>)), Error>
     where
         A: Fn() -> AR,
         AR: Into<String>,
