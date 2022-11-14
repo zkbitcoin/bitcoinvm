@@ -21,3 +21,4 @@ _minted*
 **/target
 Cargo.lock
 *.png
+.idea
