@@ -14,16 +14,22 @@ keywords = ["halo", "proofs", "zcash", "zkp", "zkSNARKs", "bitcoin"]
 
 [features]
 dev-graph = ["halo2_proofs/dev-graph", "plotters"]
+wasm = ["halo2_proofs/wasm"]
 
 [dependencies]
 rand = "0.8"
 itertools = "0.10.3"
 lazy_static = "1.4"
-halo2_proofs = { git = "https://github.com/privacy-scaling-explorations/halo2", tag = "v2022_09_10" }
-ecdsa =         { git = "https://github.com/privacy-scaling-explorations/halo2wrong", tag = "v2022_09_09" }
-ecc =           { git = "https://github.com/privacy-scaling-explorations/halo2wrong", tag = "v2022_09_09" }
-maingate =      { git = "https://github.com/privacy-scaling-explorations/halo2wrong", tag = "v2022_09_09" }
-integer =       { git = "https://github.com/privacy-scaling-explorations/halo2wrong", tag = "v2022_09_09" }
+# halo2_proofs = { git = "https://github.com/privacy-scaling-explorations/halo2", tag = "v2022_09_10" }
+halo2_proofs =      { version = "0.2.0", path = "../../privacy-scaling-explorations/halo2/halo2_proofs" }
+# ecdsa =           { git = "https://github.com/privacy-scaling-explorations/halo2wrong", tag = "v2022_09_09" }
+ecdsa =             { version = "0.1.0", path = "../../privacy-scaling-explorations/halo2wrong/ecdsa" }
+# ecc =             { git = "https://github.com/privacy-scaling-explorations/halo2wrong", tag = "v2022_09_09" }
+ecc =               { version = "0.1.0", path = "../../privacy-scaling-explorations/halo2wrong/ecc" }
+# maingate =        { git = "https://github.com/privacy-scaling-explorations/halo2wrong", tag = "v2022_09_09" }
+maingate =          { version = "0.1.0", path = "../../privacy-scaling-explorations/halo2wrong/maingate" }
+# integer =         { git = "https://github.com/privacy-scaling-explorations/halo2wrong", tag = "v2022_09_09" }
+integer =           { version = "0.1.0", path = "../../privacy-scaling-explorations/halo2wrong/integer" }
 libsecp256k1 = "0.7"
 subtle = "2.4"
 plotters = { version = "0.3.0", optional = true }
@@ -32,3 +38,5 @@ plotters = { version = "0.3.0", optional = true }
 hex = "0.4.3"
 secp256k1 = "0.24.0"
 rand_xorshift = "0.3"
+
+

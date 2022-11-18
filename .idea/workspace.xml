@@ -4,7 +4,10 @@
     <cargoProject FILE="$PROJECT_DIR$/gadgets/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18a3f102-fa46-45ac-870c-933535ba0010" name="Changes" comment="" />
+    <list default="true" id="18a3f102-fa46-45ac-870c-933535ba0010" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gadgets/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gadgets/Cargo.toml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +23,7 @@
     <option name="directoryName" value="4obt8aju" />
   </component>
   <component name="ProjectId" id="2HXZHZ4lyyaioNWUpOerYDlYmkV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,6 +50,8 @@
       <updated>1668433301620</updated>
       <workItem from="1668433304734" duration="2526000" />
       <workItem from="1668449945822" duration="4737000" />
+      <workItem from="1668768993106" duration="464000" />
+      <workItem from="1668769487263" duration="1281000" />
     </task>
     <servers />
   </component>
